@@ -23,28 +23,17 @@ class PagesController extends Controller
         $requestMethod = "GET";
         $getfield = '?screen_name=DavisCup&count=5';
         $twitter = new TwitterAPIExchange($settings);
+        $data = json_decode($twitter
+        ->setGetfield($getfield)
+        ->buildOauth($url, $requestMethod)
+        ->performRequest(), TRUE);
 
-        return view('welcome', [
-                
-            'twitter' => json_decode($twitter
-            ->setGetfield($getfield)
-            ->buildOauth($url, $requestMethod)
-            ->performRequest(), TRUE),
+        $string = $twitter
+        ->setGetfield($getfield)
+        ->buildOauth($url, $requestMethod)
+        ->performRequest();
 
-            // 'twitter_string' => $twitter
-            // ->setGetfield($getfield)
-            // ->buildOauth($url, $requestMethod)
-            // ->performRequest()
-
-            // 'twitter' => $twitter->setGetfield($getfield)
-            // ->buildOauth($url, $requestMethod)
-            // ->performRequest()
-
-        ]);
-
-
-
-
+        return view('welcome')->with(compact('data', 'string'));
     }
 
     public function contact()
