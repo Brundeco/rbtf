@@ -21,21 +21,24 @@ class PagesController extends Controller
 
         $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
         $requestMethod = "GET";
-        $getfield = '?screen_name=DavisCup&count=1';
+        $getfield = '?screen_name=DavisCup&count=5';
         $twitter = new TwitterAPIExchange($settings);
 
         return view('welcome', [
-            'item' => 'team kbtb',
-
+                
             'twitter' => json_decode($twitter
             ->setGetfield($getfield)
             ->buildOauth($url, $requestMethod)
-            ->performRequest(), TRUE)
+            ->performRequest(), TRUE),
+
+            // 'twitter_string' => $twitter
+            // ->setGetfield($getfield)
+            // ->buildOauth($url, $requestMethod)
+            // ->performRequest()
 
             // 'twitter' => $twitter->setGetfield($getfield)
             // ->buildOauth($url, $requestMethod)
             // ->performRequest()
-
 
         ]);
 

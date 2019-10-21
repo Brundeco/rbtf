@@ -4,12 +4,27 @@
 @section('title', 'Home page')
     
 @section('content')
-    <h1>This is a {{ $item }} page</h1>
-
-    {{-- <a class="twitter-timeline" href="https://twitter.com/DavisCup?ref_src=twsrc%5Etfw">Tweets by DavisCup</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> --}}
+    <h1>This is a page</h1>
     
-    <p class="tweet-cont">{{ $twitter[0]['created_at'] }}</p>
-    <p>{{ $twitter[0]['text'] }}</p>
-    <img src="{{ $twitter[0]['user']['profile_image_url_https'] }}" alt="">
+    {{ var_dump($twitter) }}
+    
+    {{-- {{ var_dump($twitter_string) }} --}}
+    
+    {{-- <div class="tweet-cont">
+        <p>{{ $twitter[0]['created_at'] }}</p>
+        <p>{{ $twitter[0]['text'] }}</p>
+        <img src="{{ $twitter[0]['user']['profile_banner_url'] }}" alt="">
+        <a target="_blank" href="{{ $twitter[0]['user']['url'] }}">{{ '@' . $twitter[0]['user']['screen_name'] }}</a>
+    </div>  --}}
+
+    @foreach ($twitter as $tweet)
+       <div class="tweet-cont">
+            <p>{{ $tweet[0]->created_at }}</p>
+            <p>{{ $tweet[0]->text}}</p>
+            <img src="{{ $tweet[0]->user->profile_banner_url }}" alt="">
+            <a target="_blank" href="{{ $tweet[0]->user->url }}">{{ '@' . $tweet[0]->user->screen_name }}</a>
+        </div>
+    @endforeach
+    
 
 @endsection('content')
