@@ -13,8 +13,6 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('/contact', 'PagesController@contact');
+Route::get('/fed', 'PagesController@fed');
 
-Route::get('/about', 'PagesController@about');
-
-Route::get('/team', 'PagesController@team');
+Route::get('/davis', 'PagesController@davis');
