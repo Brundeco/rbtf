@@ -11,8 +11,7 @@ class PagesController extends Controller
     
     public function home()
     {
-
-        return view('welcome');
+        return view('welcome')->with(compact('contents'));
     }
 
     public function davis()

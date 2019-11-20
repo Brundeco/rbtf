@@ -16,13 +16,13 @@
 
     @yield('content')
 
-    <footer>
+    {{-- <footer>
         <ul>
             <li>links</li>
             <li>links</li>
             <li>links</li>
             <li>links</li>
         </ul>
-    </footer>
+    </footer> --}}
 </body>
 </html>
