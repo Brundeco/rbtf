@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@abraham/reflection@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@abraham/reflection/-/reflection-0.3.0.tgz#b4551511a34e98cc9d3fce6068eaf42eb5202a65"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.5.5":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz#bc0782f6d69f7b7d49531219699b988f669a8f9d"
@@ -591,6 +595,13 @@
 "@nodelib/fs.stat@^1.1.2":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
+
+"@nutmeg/seed@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@nutmeg/seed/-/seed-0.13.0.tgz#1b5aa648d440dfd9f9fec4c40aa384c374e3a0a4"
+  dependencies:
+    "@abraham/reflection" "0.3.0"
+    lit-html "0.10.2"
 
 "@types/events@*":
   version "3.0.0"
@@ -1816,8 +1827,8 @@ decamelize@^1.2.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
 
 deep-equal@^1.0.1:
   version "1.1.0"
@@ -3250,6 +3261,10 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+lit-html@0.10.2:
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/lit-html/-/lit-html-0.10.2.tgz#53c846afcf91bb1e6623179ef22e327ab8ac0e0e"
+
 loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
@@ -4489,6 +4504,10 @@ punycode@1.3.2, punycode@^1.2.4:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
 
+punycode@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
+
 punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
@@ -5362,6 +5381,25 @@ tslib@^1.9.0:
 tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
+
+twitter-d@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/twitter-d/-/twitter-d-0.1.1.tgz#153876c3f1cae79cf99361b01dd155c8cc6ae066"
+
+twitter-status@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/twitter-status/-/twitter-status-0.4.1.tgz#a5718d0b50843c4fe4327015df5a4b57af0c7808"
+  dependencies:
+    "@nutmeg/seed" "0.13.0"
+    lit-html "0.10.2"
+    twitter-d "0.1.1"
+    twitter-text "2.0.4"
+
+twitter-text@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/twitter-text/-/twitter-text-2.0.4.tgz#c4ba67e0ed8eb9cd6998921fd4e53c6a82798943"
+  dependencies:
+    punycode "1.4.1"
 
 type-is@~1.6.17, type-is@~1.6.18:
   version "1.6.18"
